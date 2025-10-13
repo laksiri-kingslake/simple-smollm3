@@ -9,7 +9,16 @@ tools = [
     {
         "name": "get_weather",
         "description": "Get the weather in a city",
-        "parameters": {"type": "object", "properties": {"city": {"type": "string", "description": "The city to get the weather for"}}}}
+        "parameters": {
+            "type": "object", 
+            "properties": {
+                "city": {
+                    "type": "string", 
+                    "description": "The city to get the weather for"
+                }
+            }
+        }
+    }
 ]
 
 messages = [
@@ -18,6 +27,12 @@ messages = [
         "content": "Hello! How is the weather today in Copenhagen?"
     }
 ]
+# messages = [
+#     {
+#         "role": "user",
+#         "content": "Hello! Who is the president of Sri Lanka?"
+#     }
+# ]
 
 inputs = tokenizer.apply_chat_template(
     messages,
